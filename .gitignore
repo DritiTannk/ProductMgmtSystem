@@ -1,0 +1,10 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+.idea/
+Pipfile.lock
+
+ProductMgmtSystem/ProductMgmtSystem/settings/local.py
+
+ProductMgmtSystem/db.sqlite3
