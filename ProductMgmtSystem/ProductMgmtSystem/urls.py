@@ -17,13 +17,23 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,re_path,include
 from django.conf import settings
+# from djoser.views import TokenCreateView
+
 from .views import IndexView
 from django.contrib.staticfiles import views
 
+from users.views import TokenCreateView,TokenDestroyView
+
+
 urlpatterns = [
     path('', IndexView.as_view(), name='index_page'),
-    path('product/', include('Product.urls')),
+    # path('product/', include('Product.urls')),
     path('admin/', admin.site.urls),
+    path('api/v1/', include('Product.urls')),
+    path('api/v1/login/', TokenCreateView.as_view(), name='login'),
+    path('api/v1/logout/',TokenDestroyView.as_view(),name='logout'),
+    path('api/v1/', include('users.urls')),
+
 ]
 
 
