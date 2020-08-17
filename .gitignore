@@ -5,6 +5,6 @@ __pycache__/
 .idea/
 Pipfile.lock
 
-ProductMgmtSystem/ProductMgmtSystem/settings/local.py
+ProductMgmtSystem/settings/local.py
 
 ProductMgmtSystem/db.sqlite3
